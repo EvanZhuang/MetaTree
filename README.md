@@ -49,6 +49,7 @@ input_x = torch.tensor(train_X, dtype=torch.float32)
 input_y = torch.nn.functional.one_hot(torch.tensor(train_y)).float()
 
 # Generate a decision tree with MetaTree
+decision_tree_forest = DecisionTreeForest()
 model.depth = 2
 outputs = model.generate_decision_tree(input_x, input_y, depth=model.depth)
 decision_tree_forest.add_tree(DecisionTree(auto_dims=outputs.metatree_dimensions, auto_thresholds=outputs.tentative_splits, input_x=input_x, input_y=input_y, depth=model.depth))
