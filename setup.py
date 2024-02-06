@@ -17,8 +17,8 @@ install_requires = [
     "deepspeed"
 ]
 
-setup(
-    name="meta-tree",
+setup(  
+    name="metatreelib",
     version="0.1.0",
     author="Yufan Zhuang, Lucas Liu, Chandan Singh, Jingbo Shang, Jianfeng Gao",
     author_email="y5zhuang@ucsd.edu",

@@ -5,7 +5,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/license-mit-blue.svg">
   <img src="https://img.shields.io/badge/python-3.7+-blue">
-  <img src="https://img.shields.io/pypi/v/meta-tree?color=green">  
+  <img src="https://img.shields.io/pypi/v/metatreelib?color=green">  
 </p>  
 
 <p align="center"> MetaTree is a transformer-based decision tree algorithm. It learns from classical decision tree algorithms (greedy algorithm CART, optimal algorithm GOSDT), for better generalization capabilities.
@@ -15,10 +15,10 @@
 
 Model is avaliable at https://huggingface.co/yzhuang/MetaTree
 
-1. Install `meta-tree`:
+1. Install `metatreelib`:
 
 ```bash
-pip install meta-tree
+pip install metatreelib
 # Alternatively,  
 # clone then pip install -e .
 # pip install git+https://github.com/EvanZhuang/MetaTree
