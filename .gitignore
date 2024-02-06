@@ -1,11 +1,6 @@
 # Custom
 wandb/
-ckpts/
-autotree/ckpts/
-amlt/
-notebooks/openml/
 data/
-autotree/logs/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
