@@ -13,7 +13,7 @@
 
 ## Quickstart -- use MetaTree to generate decision tree models
 
-Model is avaliable at https://huggingface.co/yzhuang/MetaTree
+Model is available at https://huggingface.co/yzhuang/MetaTree
 
 1. Install `metatreelib`:
 
