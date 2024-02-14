@@ -69,7 +69,7 @@ outputs = model.generate_decision_tree(batch['input_x'], batch['input_y'], depth
 decision_tree_forest.add_tree(DecisionTree(auto_dims=outputs.metatree_dimensions, auto_thresholds=outputs.tentative_splits, input_x=batch['input_x'], input_y=batch['input_y'], depth=model.depth))
 
 print("Decision Tree Features: ", [x.argmax(dim=-1) for x in outputs.metatree_dimensions])
-print("Decision Tree Threasholds: ", outputs.tentative_splits)
+print("Decision Tree Thresholds: ", outputs.tentative_splits)
 ```
 
 3. Inference with the decision tree model
