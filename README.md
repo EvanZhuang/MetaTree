@@ -40,7 +40,8 @@ config = AutoConfig.from_pretrained(model_name_or_path)
 model = MetaTree.from_pretrained(
     model_name_or_path,
     config=config,
-)   
+)
+decision_tree_forest = DecisionTreeForest()   
 
 # Load Datasets
 X, y, feature_names = imodels.get_clean_dataset('fico', data_source='imodels')
