@@ -300,6 +300,8 @@ class LlamaDecoderLayer(nn.Module):
         self.hidden_size = config.hidden_size
         self.self_row_attn = LlamaAttention(config=config)
         self.self_column_attn = LlamaAttention(config=config)
+        self.emb_bias = nn.Parameter(torch.zeros(config.n_feature, config.hidden_size))
+        self.pos_bias = nn.Parameter(torch.zeros(config.max_position_embeddings, config.hidden_size))
         self.mlp = LlamaMLP(
             hidden_size=self.hidden_size,
             intermediate_size=config.intermediate_size,
@@ -342,6 +344,7 @@ class LlamaDecoderLayer(nn.Module):
 
         # Now Hidden States are in the shape of [bs, m * n, d] -> Factor shape first
         hidden_states = hidden_states.view(bs, hidden_seq_len, self.config.n_feature, self.config.hidden_size)
+        hidden_states = hidden_states + self.emb_bias + self.pos_bias[:hidden_seq_len,:].unsqueeze(1) # bs, seq, n_feature, hidden_size
         hidden_states_row = hidden_states.transpose(1,2).contiguous().view(bs * self.config.n_feature, hidden_seq_len,  self.config.hidden_size)
         hidden_states_column = hidden_states.view(bs * hidden_seq_len, self.config.n_feature, self.config.hidden_size)
 
