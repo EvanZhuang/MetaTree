@@ -1,5 +1,5 @@
 <h1 align="center"> 🌲 MetaTree 🌲 </h1>
-<p align="center"> <b>Learning a Decision Tree Algorithm with Transformers</b>  (<a href="https://arxiv.org/abs/2402.03774">Zhuang et al. 2024</a>). 
+<p align="center"> <b>Learning a Decision Tree Algorithm with Transformers</b>  (<a href="https://arxiv.org/abs/2402.03774">Zhuang et al., TMLR 2024</a>). 
 </p>
 
 <p align="center">
